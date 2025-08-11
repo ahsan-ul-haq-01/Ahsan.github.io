@@ -1,0 +1,213 @@
+<?php
+// index.php - main page (rename from index.html so PHP works for feedback success message)
+$feedbackSuccess = (isset($_GET['success']) && $_GET['success'] == '1');
+?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MedPhys Insight</title>
+  <meta name="description" content="Open-Source Learning for Medical Physics, Programming, Radiation Physics, Radiobiology, and Quantum Computing" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,600|Muli:400,600&display=swap" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="css/theme.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand page-scroll" href="#top">Explore Beam & Brain</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="page-scroll" href="#hero">Home</a></li>
+        <li><a class="page-scroll" href="#projects">Resources</a></li>
+        <li><a class="page-scroll" href="#people">About</a></li>
+        <li><a class="page-scroll" href="#bootcamp">Lecture Series</a></li>
+        <li><a class="page-scroll" href="#downloads">Downloads</a></li>
+        <li><a class="page-scroll" href="#feedback">Feedback</a></li>
+        <li><a class="page-scroll" href="#workwithus">Contact</a></li>
+        <li><a id="gallery-link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero" class="text-center">
+  <div class="container hero-inner">
+    <h1 id="page-title">MedPhys Insight</h1>
+    <p class="lead">Open-source learning for Medical Physics, Radiation Physics, Radiobiology, Programming & Quantum Computing.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary btn-xl page-scroll" href="#projects">Start Learning</a>
+      <a class="btn btn-outline btn-xl page-scroll" href="#bootcamp">Lecture Series</a>
+    </div>
+  </div>
+</header>
+
+<!-- RESOURCES (justified line) -->
+<section class="features" id="projects">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Resources</h2>
+      <p class="text-muted">Curated learning materials and projects.</p>
+      <hr/>
+    </div>
+
+    <div class="resources-grid" role="list">
+      <div class="resource-card" role="listitem" tabindex="0">
+        <div class="resource-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+        <h3>Radiation Physics</h3>
+        <p>Core concepts & worked examples.</p>
+        <a class="resource-link" href="#">Learn</a>
+      </div>
+
+      <div class="resource-card" role="listitem" tabindex="0">
+        <div class="resource-icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
+        <h3>Radiobiology</h3>
+        <p>Biological effects of radiation.</p>
+        <a class="resource-link" href="#">Learn</a>
+      </div>
+
+      <div class="resource-card" role="listitem" tabindex="0">
+        <div class="resource-icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+        <h3>Programming</h3>
+        <p>Python, MATLAB & C++ for physicists.</p>
+        <a class="resource-link" href="#">Learn</a>
+      </div>
+
+      <div class="resource-card" role="listitem" tabindex="0">
+        <div class="resource-icon"><i class="fa fa-atom" aria-hidden="true"></i></div>
+        <h3>Quantum Computing</h3>
+        <p>Algorithms & applications.</p>
+        <a class="resource-link" href="#">Learn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / TIMELINE -->
+<section class="gray features" id="people">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>About Me</h2>
+        <p>I’m Ahsan — I build open learning material in medical physics and computational tools for research and education.</p>
+        <p><a class="btn btn-default" href="https://ahsan-ul-haq-01.github.io/portfolio/">Personal Website</a></p>
+      </div>
+      <div class="col-md-6">
+        <h3>Journey</h3>
+        <ul class="timeline">
+          <li><strong>2020</strong> - M.Sc. Medical Physics</li>
+          <li><strong>2021</strong> - Research in Radiobiology</li>
+          <li><strong>2023</strong> - Launched lecture series</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LECTURE SERIES (small hoverable cards) -->
+<section id="bootcamp">
+  <div class="container">
+    <div class="section-heading text-center"><h2>Lecture Series</h2></div>
+
+    <div class="lecture-grid">
+      <!-- cards are empty boxes ready for images -->
+      <div class="lecture-card" data-title="Radiation Physics" tabindex="0" role="button"></div>
+      <div class="lecture-card" data-title="Radiobiology" tabindex="0" role="button"></div>
+      <div class="lecture-card" data-title="Programming" tabindex="0" role="button"></div>
+      <div class="lecture-card" data-title="Quantum Computing" tabindex="0" role="button"></div>
+    </div>
+
+    <p class="text-muted text-center small">Click any card to add or replace images and link to lecture content (placeholders ready).</p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads">
+  <div class="container">
+    <div class="section-heading text-center"><h2>Downloads</h2><p class="text-muted">Slides, code and small datasets.</p></div>
+    <div class="download-grid">
+      <div class="download-card">
+        <h4>Intro to Radiation Physics (PDF)</h4>
+        <a href="#" class="btn btn-sm btn-default">Download</a>
+      </div>
+      <div class="download-card">
+        <h4>Python for Physicists (Notebook)</h4>
+        <a href="#" class="btn btn-sm btn-default">Download</a>
+      </div>
+      <div class="download-card">
+        <h4>Lecture Demos (ZIP)</h4>
+        <a href="#" class="btn btn-sm btn-default">Download</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback">
+  <div class="container">
+    <div class="section-heading text-center"><h2>Feedback</h2></div>
+
+    <?php if ($feedbackSuccess): ?>
+      <div class="alert alert-success text-center" role="alert" id="feedback-success">
+        ✅ Thank you for your feedback! We appreciate your time.
+      </div>
+    <?php endif; ?>
+
+    <form action="Feedback/save_feedback.php" method="POST" class="feedback-form" id="feedback-form">
+      <div class="row">
+        <div class="col-sm-4"><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="col-sm-4"><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="col-sm-4"><input type="tel" name="phone" placeholder="Your Phone" required></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><textarea name="message" placeholder="Your Message" rows="5" required></textarea></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center"><button type="submit" class="btn btn-primary">Submit Feedback</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT / SOCIAL -->
+<section id="workwithus">
+  <div class="container">
+    <div class="section-heading text-center"><h2>Contact & Social</h2></div>
+
+    <div class="contact-icons">
+      <a href="https://medium.com/ahsan_ul_haq_01"><img src="img/logos/mmedium.png" alt="Medium"><span>Medium</span></a>
+      <a href="https://www.linkedin.com/in/ahsan-ul-haq01/"><img src="img/logos/llinkedin.png" alt="LinkedIn"><span>LinkedIn</span></a>
+      <a href="https://twitter.com/ahsan_ul_haq_0"><img src="img/logos/Logo_of_Twitter.svg.png" alt="Twitter"><span>Twitter</span></a>
+      <a href="https://github.com/ahsan-ul-haq-01"><img src="img/logos/github.png" alt="GitHub"><span>GitHub</span></a>
+      <a href="mailto:ahsanulhaqreshi@gmail.com"><img src="img/logos/gmail.jpg" alt="Email"><span>Email</span></a>
+    </div>
+
+    <footer class="footer-container">
+      <div class="footer-left">Copyright © 2025 MedPhys Insight</div>
+      <div class="footer-middle"><img src="img/stanfordmlgrouplogo1.png" class="footer-strip" alt="Logo"></div>
+      <div class="footer-right">Developed & Maintained by AHSAN UL HAQ</div>
+    </footer>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="lib/jquery/jquery.min.js" defer></script>
+<script src="lib/bootstrap/js/bootstrap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" defer></script>
+<script src="js/theme.js" defer></script>
+</body>
+</html>
