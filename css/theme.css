@@ -274,6 +274,28 @@ section.features .feature-item i {
   }
 }
 
+/* new footer  */
+/* Remove container backgrounds */
+.footer-container {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Clean strip display */
+.medphy-footer-banner {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+    object-fit: cover;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* end */
+
+/*
 footer {
   background-color: #222222;
   padding: 50px 0;
@@ -283,6 +305,8 @@ footer {
 footer img {
   height: 100px;
 }
+*/
+
 
 footer p {
   font-size: 12px;
