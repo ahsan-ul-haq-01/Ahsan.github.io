@@ -1,3 +1,4 @@
+
 .gray {
   background-color: #f5f5f5;
 }
@@ -272,8 +273,6 @@ section.features .feature-item i {
   section.features .feature-item {
     max-width: none;
   }
-
-
 }
 
 footer {
@@ -285,9 +284,10 @@ footer {
 footer img {
   height: 100px;
 }
+
 footer p {
-  font-size: 10px;
-  margin: 0.5;
+  font-size: 12px;
+  margin: 0;
 }
 footer ul {
   margin-bottom: 0;
@@ -302,8 +302,6 @@ footer ul li a:active,
 footer ul li a.active {
   text-decoration: none;
 }
-
-
 .bg-primary {
   background: #a90531;
   color: white;
