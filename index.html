@@ -156,17 +156,32 @@ $feedbackSuccess = (isset($_GET['success']) && $_GET['success'] == '1');
 </section>
 
 <!-- FEEDBACK -->
-<form id="feedback-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone Number" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
-</form>
+<!-- Feedback Form -->
+<section id="feedback">
+  <div class="container">
+    <h2 class="text-center">Feedback</h2>
 
-<div id="feedback-success" style="display:none; color:green; margin-top:10px;">
-    ✅ Thank you for your feedback!
-</div>
+    <form id="feedback-form" class="feedback-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedback-success" style="display:none; color:green; margin-top:10px;">
+      ✅ Thank you for your feedback!
+    </div>
+  </div>
+</section>
 
 <script>
 document.getElementById("feedback-form").addEventListener("submit", function(e) {
@@ -179,7 +194,10 @@ document.getElementById("feedback-form").addEventListener("submit", function(e) 
         message: this.message.value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbwRPWlTfJSM7PbW6jfbvO6Z4GzE5dnAdD9bUMBC6IKqtXVXDbkuDtztwFZWs3R5bbY9/exec", {
+    // 🚨 Replace with your Google Apps Script Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwRPWlTfJSM7PbW6jfbvO6Z4GzE5dnAdD9bUMBC6IKqtXVXDbkuDtztwFZWs3R5bbY9/exec";
+
+    fetch(scriptURL, {
         method: "POST",
         body: JSON.stringify(formData)
     })
@@ -193,7 +211,7 @@ document.getElementById("feedback-form").addEventListener("submit", function(e) 
             }, 4000);
         }
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error("Error!", err));
 });
 </script>
 
