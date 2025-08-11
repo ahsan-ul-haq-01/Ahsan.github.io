@@ -156,31 +156,47 @@ $feedbackSuccess = (isset($_GET['success']) && $_GET['success'] == '1');
 </section>
 
 <!-- FEEDBACK -->
-<section id="feedback">
-  <div class="container">
-    <div class="section-heading text-center"><h2>Feedback</h2></div>
+<form id="feedback-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+</form>
 
-    <?php if ($feedbackSuccess): ?>
-      <div class="alert alert-success text-center" role="alert" id="feedback-success">
-        ✅ Thank you for your feedback! We appreciate your time.
-      </div>
-    <?php endif; ?>
+<div id="feedback-success" style="display:none; color:green; margin-top:10px;">
+    ✅ Thank you for your feedback!
+</div>
 
-    <form action="Feedback/save_feedback.php" method="POST" class="feedback-form" id="feedback-form">
-      <div class="row">
-        <div class="col-sm-4"><input type="text" name="name" placeholder="Your Name" required></div>
-        <div class="col-sm-4"><input type="email" name="email" placeholder="Your Email" required></div>
-        <div class="col-sm-4"><input type="tel" name="phone" placeholder="Your Phone" required></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12"><textarea name="message" placeholder="Your Message" rows="5" required></textarea></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 text-center"><button type="submit" class="btn btn-primary">Submit Feedback</button></div>
-      </div>
-    </form>
-  </div>
-</section>
+<script>
+document.getElementById("feedback-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        message: this.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwRPWlTfJSM7PbW6jfbvO6Z4GzE5dnAdD9bUMBC6IKqtXVXDbkuDtztwFZWs3R5bbY9/exec", {
+        method: "POST",
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(response => {
+        if (response.result === "success") {
+            document.getElementById("feedback-success").style.display = "block";
+            this.reset();
+            setTimeout(() => {
+                document.getElementById("feedback-success").style.display = "none";
+            }, 4000);
+        }
+    })
+    .catch(err => console.error(err));
+});
+</script>
+
 
 <!-- CONTACT / SOCIAL -->
 <section id="workwithus">
