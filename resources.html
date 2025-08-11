@@ -9,6 +9,19 @@
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
+<script>
+$(document).ready(function() {
+    if (window.location.hash) {
+        let hash = window.location.hash;
+        let modalId = hash + "Modal"; // e.g., #resource1 => #resource1Modal
+        if ($(modalId).length) {
+            $(modalId).modal('show');
+        }
+    }
+});
+</script>
+
 <body>
 
 <!-- Navbar -->
@@ -36,6 +49,7 @@
 <!-- Resources Grid -->
 <section class="container" style="padding:40px 0;">
   <div class="row">
+
     <!-- Resource Card 1 -->
     <div class="col-md-3 col-sm-6">
       <div class="resource-card" data-toggle="modal" data-target="#resource1Modal">
@@ -56,7 +70,7 @@
 
     <!-- Resource Card 3 -->
     <div class="col-md-3 col-sm-6">
-      <div class="resource-card" data-toggle="https://pylinac.readthedocs.io/en/latest/" data-target="#resource3Modal">
+      <div class="resource-card" data-toggle="modal" data-target="#resource3Modal">
         <i class="fa fa-laptop"></i>
         <h3>Programming for Physicists</h3>
         <p>Python, MATLAB, and C++ for simulations.</p>
@@ -68,13 +82,16 @@
       <div class="resource-card" data-toggle="modal" data-target="#resource4Modal">
         <i class="fa fa-atom"></i>
         <h3>Quantum Computing</h3>
-        <p>Quantum algorithms and physics applications.</p>
+        <p>Quantum algorithms and applications in physics.</p>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- Modals -->
+
+<!-- Modal 1 -->
 <div id="resource1Modal" class="modal fade">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -83,14 +100,15 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p>Detailed overview of core concepts in radiation physics...</p>
-        <img src="img/resources/radiation.jpg" class="img-responsive" alt="">
-        <a href="#" class="btn btn-primary" target="_blank">Open Resource</a>
+        <p>This resource covers the fundamental concepts of radiation physics, including particle interactions, radiation units, and measurement techniques.</p>
+        <img src="img/resources/radiation.jpg" class="img-responsive" alt="Radiation Physics">
+        <a href="Resource_files/Radiation_Basics/radiation.jpg" class="btn btn-primary" target="_blank" style="margin-top:15px;">📄 Open PDF Resource</a>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Modal 2 -->
 <div id="resource2Modal" class="modal fade">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -99,13 +117,48 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p>Learn about radiation's effects on living tissues...</p>
-        <img src="img/resources/radiobiology.jpg" class="img-responsive" alt="">
-        <a href="#" class="btn btn-primary" target="_blank">Open Resource</a>
+        <p>This resource explains the biological effects of radiation, including DNA damage, repair mechanisms, and dose-response relationships.</p>
+        <img src="img/resources/radiobiology.jpg" class="img-responsive" alt="Radiobiology">
+        <a href="Resource_files/Radiobiology/radiobiology.jpg" class="btn btn-primary" target="_blank" style="margin-top:15px;">📄 Open PDF Resource</a>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Modal 3 -->
+<div id="resource3Modal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Programming for Physicists</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Learn programming techniques in Python, MATLAB, and C++ tailored for physics simulations and data analysis.</p>
+        <img src="Resource_files/Programming/Programming.jpg" class="img-responsive" alt="Programming for Physicists">
+        <a href="https://youtu.be/example" class="btn btn-primary" target="_blank" style="margin-top:15px;">▶ Watch Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="resource4Modal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Quantum Computing</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Understand quantum algorithms, qubits, and applications in physics research with this beginner-friendly guide.</p>
+        <img src="img/resources/quantum.jpg" class="img-responsive" alt="Quantum Computing">
+        <a href="Resource_files/Quantum_compution/Quantum_computing.jpg" class="btn btn-primary" target="_blank" style="margin-top:15px;">📄 Open PDF Resource</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Add resource3Modal and resource4Modal similarly -->
 
