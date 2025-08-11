@@ -1,14 +1,30 @@
-<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <g>
-  <title>background</title>
-  <rect fill="#a90531" id="canvas_background" height="50" width="50" y="0" x="0"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-  </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <text style="cursor: move;" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="24" id="svg_1" y="33.21875" x="7.682259" stroke-width="0" stroke="#000" fill="#ffffff">ML</text>
- </g>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1602 9020 c-230 -61 -408 -229 -478 -455 -18 -58 -19 -162 -19
+-3445 0 -3204 1 -3388 18 -3449 53 -194 182 -347 371 -441 157 -77 -179 -70
+3653 -68 l3438 3 77 26 c122 42 204 94 298 188 69 69 94 103 127 171 80 164
+73 -165 73 3567 0 3709 6 3409 -70 3558 -92 183 -272 317 -474 354 -42 8
+-1071 11 -3500 10 -3359 0 -3443 -1 -3514 -19z m1671 -1608 c3 -4 39 -160 81
+-347 41 -187 150 -673 241 -1080 91 -407 184 -825 207 -928 23 -104 45 -182
+49 -175 4 7 12 40 19 73 7 33 48 211 92 395 43 184 151 643 239 1020 88 377
+179 766 202 865 l43 180 542 3 542 2 0 -2255 0 -2255 -360 0 -360 0 0 1562 c0
+860 -4 1558 -9 1553 -8 -9 -55 -200 -235 -940 -212 -871 -411 -1688 -467
+-1917 l-63 -258 -208 0 -207 0 -11 58 c-6 31 -31 140 -55 242 -24 102 -71 300
+-104 440 -135 573 -193 820 -216 915 -13 55 -87 366 -164 690 -173 728 -199
+837 -206 843 -3 3 -5 -713 -5 -1591 l0 -1597 -370 0 -370 0 0 2255 0 2255 574
+0 c316 0 577 -3 579 -8z m4357 -21 c47 -13 122 -40 166 -61 355 -165 552 -479
+595 -952 16 -175 6 -644 -16 -768 -74 -415 -324 -715 -685 -824 -165 -49 -251
+-59 -597 -63 l-323 -5 0 -904 0 -904 -395 0 -395 0 0 2255 0 2256 783 -3 782
+-4 85 -23z"/>
+<path d="M6770 6075 l0 -685 174 0 c279 0 382 22 494 104 67 50 116 120 143
+207 17 54 19 94 19 362 0 321 -7 383 -51 469 -53 103 -198 198 -335 218 -38 5
+-153 10 -256 10 l-188 0 0 -685z"/>
+</g>
 </svg>
