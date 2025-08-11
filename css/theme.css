@@ -272,8 +272,128 @@ section.features .feature-item i {
   section.features .feature-item {
     max-width: none;
   }
+
+
 }
 
+/* ========================================
+   FOOTER STYLES - MODIFIED FOR BANNER
+   ======================================== */
+
+footer {
+  background-color: #222222;
+  padding: 30px 0; /* Reduced from 50px to accommodate banner */
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer Banner Container */
+.footer-banner-container {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 0 20px 0; /* Add margin below banner */
+}
+
+/* Main banner image - overrides global img styles for footer */
+.medphy-footer-banner {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 180px !important; /* Slightly smaller to fit in footer */
+  display: block !important;
+  object-fit: cover;
+  object-position: center;
+  border: none !important;
+  outline: none !important;
+  vertical-align: bottom;
+  margin: 0 !important; /* Override global img margin */
+  padding: 0 !important; /* Override global img padding */
+}
+
+/* Small text below banner - matches footer styling */
+.footer-banner-text {
+  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 12px; /* Slightly larger than footer p */
+  color: rgba(255, 255, 255, 0.6); /* Lighter than other footer text */
+  margin: 8px 0 0 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Keep existing footer img styles for other images */
+footer img:not(.medphy-footer-banner) {
+  height: 80px;
+  padding: 10px 0px;
+}
+
+footer p:not(.footer-banner-text) {
+  font-size: 10px;
+  margin: 0.5;
+}
+
+footer ul {
+  margin-bottom: 0;
+}
+
+footer ul li a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active,
+footer ul li a.active {
+  text-decoration: none;
+}
+
+/* Responsive adjustments for footer banner */
+@media screen and (max-width: 768px) {
+  .medphy-footer-banner {
+    max-height: 140px !important;
+  }
+
+  .footer-banner-text {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  footer {
+    padding: 20px 0; /* Reduce footer padding on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .medphy-footer-banner {
+    max-height: 100px !important;
+  }
+
+  .footer-banner-text {
+    font-size: 10px;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+}
+
+/* Alternative: If you want the banner outside the dark footer */
+.footer-banner-wrapper {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-banner-wrapper + footer {
+  margin-top: 0;
+}
+
+/*
 footer {
   background-color: #222222;
   padding: 50px 0;
@@ -281,11 +401,11 @@ footer {
 }
 
 footer img {
-  height: 100px;
+  height: 80px;
 }
 footer p {
-  font-size: 12px;
-  margin: 0;
+  font-size: 10px;
+  margin: 0.5;
 }
 footer ul {
   margin-bottom: 0;
@@ -300,6 +420,9 @@ footer ul li a:active,
 footer ul li a.active {
   text-decoration: none;
 }
+
+*/
+
 .bg-primary {
   background: #a90531;
   color: white;
