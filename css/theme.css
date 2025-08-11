@@ -267,35 +267,6 @@ section.features .feature-item i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-footer {
-  width: 100%;           /* full-width across the viewport */
-  max-width: 1200px;     /* optional cap for large screens */
-  margin: 0 auto;        /* center when max-width is applied */
-  height: 80px;          /* fixed height */
-  padding: 0;            /* remove default padding */
-  overflow: hidden;      /* hide overflow if content exceeds */
-}
-
-/* If you want a minimum height rather than a fixed height: */
-footer {
-  min-height: 80px;
-  padding: 10px 0;       /* you can then add vertical padding */
-}
-
-/* Responsive example—smaller footer on mobile */
-@media (max-width: 768px) {
-  footer {
-    height: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  footer {
-    height: 50px;
-  }
-}
-
 @media (min-width: 992px) {
   section.features .device-container,
   section.features .feature-item {
@@ -312,7 +283,7 @@ footer {
 }
 
 footer img {
-  height: 80px;
+  height: 100px;
 }
 footer p {
   font-size: 10px;
