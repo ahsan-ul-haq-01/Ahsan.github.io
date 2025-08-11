@@ -8,7 +8,6 @@ $feedbackSuccess = (isset($_GET['success']) && $_GET['success'] == '1');
   <meta charset="utf-8" />
   <title>MedPhys Insight</title>
   <meta name="description" content="Open-Source Learning for Medical Physics, Programming, Radiation Physics, Radiobiology, and Quantum Computing" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,600|Muli:400,600&display=swap" rel="stylesheet">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
