@@ -770,3 +770,29 @@ a:hover{color:#fcbd20}
 
 /* small utility */
 .btn-outline{background:transparent;border:2px solid #fff;color:#fff;border-radius:300px;padding:10px 20px}
+
+
+/* Resources page */
+.resource-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.resource-card i {
+    font-size: 40px;
+    color: #a90531;
+    margin-bottom: 10px;
+}
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.modal-body img {
+    margin-top: 15px;
+    border-radius: 8px;
+}
