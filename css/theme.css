@@ -104,7 +104,7 @@ svg {
   border-radius: 5px;
   background-color: rgb(249, 248, 248);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 
 }
 
@@ -123,7 +123,7 @@ svg {
   border-radius: 5px;
   background-color: rgb(249, 248, 248);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
   
 }
 
@@ -155,9 +155,9 @@ body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 a {
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  transition: all 0.15s;
   color: #a90531;
 }
 a:hover,
@@ -197,9 +197,9 @@ p, ul > li {
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  transition: all 0.15s;
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 400;
   letter-spacing: 1px;
@@ -234,13 +234,22 @@ p, ul > li {
   color: #a90531;
 }
 .navbar-default .nav > li.active > a,
-.navbar-default .nav > li.active > a:focus {
-  color: #a90531 !important;
-  background-color: transparent;
+.navbar-default .nav > li.active > a:visited {
+  color: #9a0707 !important;
+  background-color: #b9b7b4 !important;
+  border-radius: 2px;
+  padding: 6px 24px 6px 24px;
+  border-radius: 2px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(169,5,49,0.10);
 }
 .navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus,
 .navbar-default .nav > li.active > a:focus:hover {
-  background-color: transparent;
+  color: #fff !important;
+    background-color: #c50c3e !important;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(197,12,62,0.12);
 }
 @media (min-width: 768px) {
   .navbar-default {
@@ -282,20 +291,29 @@ p, ul > li {
     color: #a90531;
   }
 }
+/* ----------------------------
+ Header with Pattern on Gradient
+-----------------------------*/
 #header {
-  background: #a90531;
-  /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #c50c3e, #a90531);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #c50c3e, #a90531);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Fallback solid */
+  background-color: #a90531;
+
+  /* Layer 1: PNG pattern; Layer 2: gradient background */
+  background-image: url("../img/bg-pattern.png"),
+    linear-gradient(to left, #c50c3e, #a90531);
+
+  /* First value = pattern, second = gradient */
+  background-repeat: repeat, no-repeat;
+  background-size: 180px 180px, cover;
+  background-position: top left, center;
+
   color: white;
-  padding: 30px 0px;
-  padding-top: 50px;
+  padding: 50px 0 30px;
+  min-height: 200px; /* ensures visibility */
 }
 
-@media screen and (max-width: 767px){
-  #header{
+@media screen and (max-width: 767px) {
+  #header {
     margin-top: 50px;
     padding-top: 30px;
   }
@@ -344,7 +362,7 @@ section.features .feature-item i {
 }
 
 footer {
-  background-color: #080808;
+  background: linear-gradient(159deg, #ff0000 0%, #ff0000 53%, #0000ff 53%, #0000ff 100%);
   padding: 10px 0;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -429,7 +447,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #222222;
+  -webkit-tap-highlight-color: #222222;
 }
 
 /* Footer container starts from here */
@@ -437,7 +455,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff; /* or light gray for contrast */
+    background-color: #a29d9d; /* or light gray for contrast */
     border-top: 0.5px solid black;
     padding: 30px 20px;
 }
@@ -462,13 +480,16 @@ body {
 .footer-strip {
     height: 100px;
     object-fit: cover;
-    border: 0.5px solid black;
     animation: fadeInFooter 1.2s ease-in-out forwards;
     opacity: 0;
     width: 300px; /* fixed width for better proportion */
-    height: 90px; /* maintain aspect ratio */
-    margin: 0 auto; /* center the image */
-    background-color: #100101
+    height: 80px;
+    box-shadow: 0 0 0 2px black;
+    border: none;
+    background: black;
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 0 4px;
 }
 
 /* Right text */
@@ -514,7 +535,7 @@ body {
     align-items: center;
     text-decoration: none;
     color: #0a0708;
-    transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
 }
 
 .contact-icons a:hover {
@@ -564,7 +585,7 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .resource-card i {
     font-size: 40px;
@@ -588,7 +609,7 @@ body {
     height: 150px;
     background: #eee;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
 }
 .lecture-card:hover {
     transform: scale(1.05);
@@ -631,7 +652,7 @@ body {
 /* Basic fonts + reset */
 html,body{height:100%;width:100%}
 body{font-family:'Muli','Helvetica','Arial',sans-serif;margin:0;color:#0a0708}
-a{transition:all .35s;color:#a90531}
+a{transition:all .15s;color:#a90531}
 a:hover{color:#fcbd20}
 
 /* Header / Hero */
@@ -662,7 +683,7 @@ a:hover{color:#fcbd20}
   border-radius:10px;
   text-align:center;
   box-shadow:0 6px 18px rgba(0,0,0,0.06);
-  transition:transform .25s, box-shadow .25s;
+  transition:transform .15s, box-shadow .15s;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -678,7 +699,7 @@ a:hover{color:#fcbd20}
 .lecture-grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:18px}
 .lecture-card{
   width:200px;height:140px;border-radius:10px;background:#f3f3f3;box-shadow:0 6px 12px rgba(0,0,0,0.06);
-  transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;
+  transition:transform .15s,box-shadow .15s,background .15s;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
 }
 .lecture-card:before{
@@ -716,7 +737,7 @@ a:hover{color:#fcbd20}
     border: 1px solid #ccc;
     border-radius: 6px;
     outline: none;
-    transition: border-color 0.3s ease;
+  transition: border-color 0.15s ease;
 }
 
 .feedback-form input:focus,
@@ -732,7 +753,7 @@ a:hover{color:#fcbd20}
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+  transition: background-color 0.15s ease;
 }
 
 .feedback-form button:hover {
@@ -741,7 +762,7 @@ a:hover{color:#fcbd20}
 
 /* Contact icons (smaller icons) */
 .contact-icons{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:18px}
-.contact-icons a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#0a0708;transition:transform .25s}
+.contact-icons a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#0a0708;transition:transform .15s}
 .contact-icons img{width:48px;height:48px;object-fit:cover;border-radius:8px;padding:6px;background:#fff;box-shadow:0 6px 12px rgba(0,0,0,0.06)}
 .contact-icons a:hover{transform:translateY(-6px)}
 
@@ -778,15 +799,16 @@ a:hover{color:#fcbd20}
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
     cursor: pointer;
 }
 .resource-card i {
     font-size: 40px;
     color: #a90531;
     margin-bottom: 10px;
+    
 }
 .resource-card:hover {
     transform: translateY(-5px);
@@ -795,4 +817,57 @@ a:hover{color:#fcbd20}
 .modal-body img {
     margin-top: 15px;
     border-radius: 8px;
+}
+/* ----------------------------
+ Footer Gradient: Red–Blue Split
+-----------------------------*/
+footer {
+  background: linear-gradient(159deg, #ff0000 0%, #ff0000 53%, #0000ff 53%, #0000ff 100%);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------
+ Example Footer Flex Layout
+-----------------------------*/
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle at 50% 50%, #918d8d 0%, #bebaba 60%, #878484 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: background 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1), border-radius 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
