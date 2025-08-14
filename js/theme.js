@@ -1,3 +1,16 @@
+// Minimal dark mode toggle logic
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleBtn = document.getElementById('darkModeToggle');
+  if (!toggleBtn) return;
+  toggleBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      toggleBtn.innerHTML = '<i class="fa fa-sun-o"></i>';
+    } else {
+      toggleBtn.innerHTML = '<i class="fa fa-moon-o"></i>';
+    }
+  });
+});
 (function($) {
   "use strict";
 

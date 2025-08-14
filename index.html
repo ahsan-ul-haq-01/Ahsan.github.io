@@ -4,7 +4,14 @@
   <meta charset="utf-8" />
   <title>MedPhys Insight</title>
   <meta name="description" content="Open-Source Learning for Medical Physics, Programming, Radiation Physics, Radiobiology, and Quantum Computing" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
   <link href="https://fonts.googleapis.com/css?family=Lato:400,600|Muli:400,600&display=swap" rel="stylesheet">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -13,6 +20,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body id="top">
+  <button id="darkModeToggle" aria-label="Toggle dark mode"><i class="fa fa-moon-o"></i></button>
 
 <!-- NAV -->
 <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
@@ -101,7 +109,7 @@
 </section>
 
 <!-- ABOUT / TIMELINE -->
-<section class="gray features" id="people">
+<section class="about-section" id="people">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
