@@ -13,6 +13,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 (function($) {
   "use strict";
+  document.getElementById("feedback-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        message: this.message.value
+    };
+
+    // 🚨 Replace with your Google Apps Script Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwRPWlTfJSM7PbW6jfbvO6Z4GzE5dnAdD9bUMBC6IKqtXVXDbkuDtztwFZWs3R5bbY9/exec";
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(response => {
+        if (response.result === "success") {
+            document.getElementById("feedback-success").style.display = "block";
+            this.reset();
+            setTimeout(() => {
+                document.getElementById("feedback-success").style.display = "none";
+            }, 4000);
+        }
+    })
+    .catch(err => console.error("Error!", err));
+});
 
   // Page scrolling using jQuery easing
   $(document).on('click', 'a.page-scroll', function(event) {
