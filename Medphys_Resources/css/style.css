@@ -1,0 +1,117 @@
+/* Home Button Styling */
+.home-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: #ff6b6b; /* coral red */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.home-btn:hover {
+  background-color: #180de2; /* darker red */
+}
+
+/* Body Gradient Background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #d80505; /* deep violet */
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #fbfaf7; /* gold */
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  margin-top: 1rem;
+}
+
+.nav-buttons .btn {
+  margin: 0.3rem;
+  background: #ffffff; /* coral */
+  color: #090909;
+}
+
+.nav-buttons .btn:hover {
+  background: #3816e1; /* darker red */
+}
+
+/* Main Content */
+main {
+  padding: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #060505; /* golden yellow */
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+  background: #a8aaaa; /* light grey-blue */
+  color: #0e0f14;      /* dark navy text */
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #e0fbfc; /* light cyan on hover */
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: #990505; /* deep violet headings */
+}
+
+/* Buttons inside cards */
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #4361ee; /* bright blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #3a0ca3; /* deep violet */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #2b2d42;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+}
